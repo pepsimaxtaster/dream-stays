@@ -45,7 +45,8 @@
   font-style: italic;
   position: relative;
   font-weight: bold;
-  font-size: 10px;
+  font-size: 20px;
+  color: #ffffff;
 }
 .app-slogan {
   font-size: 30px;
@@ -64,4 +65,9 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+}
+.app-title {
+  font-size: 90px;
+  font-weight: bold;
+  color: #ffffff;
 }

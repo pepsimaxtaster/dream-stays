@@ -1,20 +1,60 @@
 import "./App.css";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Card from "./components/Card";
 import { getStays } from "./data";
 
 // Main app
 export default function App() {
+  const [time, setTime] = useState({
+    minutes: new Date().getMinutes(),
+    hours: new Date().getHours(),
+    seconds: new Date().getSeconds(),
+  });
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      const date = new Date();
+      setTime({
+        minutes: date.getMinutes(),
+        hours: date.getHours(),
+        seconds: date.getSeconds(),
+      });
+    }, 1000);
+    return () => clearInterval(intervalId);
+  }, []);
+  const convertToTwoDigit = (number) => {
+    return number.toLocaleString("en-US", {
+      minimumIntegerDigits: 2,
+    });
+  };
   let stays = getStays();
+  const egBlue = "#3662d8";
+  const purple = "#A020F0";
+  const [bgColor, setBgColor] = useState(egBlue);
+  const changeColor = () => {
+    if (bgColor === egBlue) {
+      setBgColor(purple);
+    } else {
+      setBgColor(egBlue);
+    }
+  };
   return (
     <div className="app">
-      <header className="app-header">
+      <div className="clock">
+        <span>{time.hours}:</span>
+        <span>{time.minutes}:</span>
+        <span>{time.seconds}</span>
+        <span>{time.hours >= 12 ? " PM" : " AM"}</span>
+      </div>
+      <header style={{ background: bgColor }}>
         <p className="disclaimer">
           This is a fictional website for educational purposes
         </p>
-        <h1> Rome </h1>
+        <h1 className="app-title"> Rome </h1>
         <p className="app-slogan"> Explore the ancient city of Rome</p>
       </header>
+      <button type="button" onClick={changeColor}>
+        Click me!
+      </button>
       <br />
       <div className="container">
         {stays.map((stay) => {

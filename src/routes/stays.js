@@ -3,6 +3,7 @@ import "./stays.css";
 import { getStay } from "../data";
 import React from "react";
 import { Link } from "react-router-dom";
+import Attractions from "../components/NearbyAttractions";
 
 export default function Stay() {
   let params = useParams();
@@ -18,9 +19,10 @@ export default function Stay() {
           <button className="nav-button">Home</button>
         </Link>
       </header>
-      <img className="stay-img" alt={stay.name} src={stay.id} />
+      <img className="stay-img" alt={stay.name} src={stay.img} />
       <h2>{stay.name}</h2>
       <p className="stay-description">{stay.description}</p>
+      <p classname="stay-price">{stay.price}</p>
     </div>
   ) : (
     <></>
