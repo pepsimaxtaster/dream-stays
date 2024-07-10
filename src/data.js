@@ -1,31 +1,32 @@
 let stays = [
   {
-    id: "thelondongrandhotel",
-    name: "The London Grand Hotel",
-    img:
-      "https://media.cntraveler.com/photos/5f6198aa987090832029b181/16:9/w_2560%2Cc_limit/ritz-london-exterior.jpg",
+    id: "TheColosseum",
+    name: "The Colosseum",
+    img: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=3496&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D.jpg",
     description:
-      "We are London’s most iconic hotel. A five star haven on Piccadilly that is famous the world over for its historic elegance, impeccable service, impressive suites, and legendary Afternoon Tea.",
-    nearby: ["London eye", "Buckingham Palace", "Tower Bridge"]
+      "The Colosseum, also named the Flavian Amphitheater, is a large amphitheater in Rome. It was built during the reign of the Flavian emperors as a gift to the Roman people. Construction of the Colosseum began sometime between C.E. 70 and 72 under the emperor Vespasian.",
+    nearby: [
+      "London eye",
+      "Buckingham Palace",
+      "Tower Bridge (yet to be editted)",
+    ],
   },
   {
-    id: "crystalpalacecamping",
-    name: "Crystal Palace Camping",
-    img:
-      "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80",
+    id: "TreviFountain",
+    name: "Trevi Fountain",
+    img: "https://images.unsplash.com/photo-1529154036614-a60975f5c760?q=80&w=3552&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description:
-      "A beautiful campsite situated in the centre of Crystal Palace, surrounded by picteresque hedge rows. Late at night gaze at the flashing lights heading towards Gatwick Airport",
-    nearby: ["Crystal Palace Football Club", "Croydon"]
+      "The Trevi Fountain, built in the 1700s, is perhaps one of Rome's most iconic structures. Erected on the site of an ancient Roman water source, the fountain is made of the same material as the Colosseum (travertine stone). The Trevi Fountain serves as a modern marvel that links back to Rome's fabled past",
+    nearby: ["Crystal Palace Football Club", "Croydon"],
   },
   {
-    id: "dorothycanalboat",
-    name: "Dorothy Canal Boat",
-    img:
-      "https://images.unsplash.com/photo-1520086293406-c6dae2b77a64?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80",
+    id: "Pantheon",
+    name: "Pantheon",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3HGnQ3D6jdLBnIL0mPJpE3FLyY873V6-2ew&usqp=CAU",
     description:
-      "Explore London by boat and stay at on a traditional canal boat situated on the river Thames. Dorothy is furnished with a fully working shower and microwave",
-    nearby: [""]
-  }
+      "The Pantheon is a state property, managed by Italy's Ministry of Cultural Heritage and Activities and Tourism through the Polo Museale del Lazio. In 2013, it was visited by over six million people. The Pantheon's large circular domed cella, with a conventional temple portico front, was unique in Roman architecture.",
+    nearby: [""],
+  },
 ];
 
 export function getStays() {

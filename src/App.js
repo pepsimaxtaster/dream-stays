@@ -12,7 +12,8 @@ export default function App() {
         <p className="disclaimer">
           This is a fictional website for educational purposes
         </p>
-        <hi>Dream Stays: Rome</h1>
+        <h1> Rome </h1>
+        <p className="app-slogan"> Explore the ancient city of Rome</p>
       </header>
       <br />
       <div className="container">
@@ -32,18 +33,28 @@ export default function App() {
       <div>
         <h2 className="app-subheader">Climate</h2>
         <p>
-          London has some of the best weather in the world, with average highs
-          of 15 degress celcius
+          {" "}
+          Rome has a Mediterranean climate with cool winters and warm and hot
+          summers The temperatures can vary with lows of 2C in January to the
+          highs of 30C in July and August There is little or no rainfall in
+          summer months but this then increases to the average of 90mm in
+          November and December.{" "}
         </p>
       </div>
       <hr className="app-divider" />
       <div>
         <h2 className="app-subheader">History</h2>
         <p>
-          London has a rich history dating back to 43 CE. Explore edwardian and
-          victorian architecture.
+          Rome was founded around 625 BC in the areas of ancient Italy known as
+          Etruria and Latium. It is thought that the city-state of Rome was
+          initially formed by Latium villagers joining together with settlers
+          from the surrounding hills in response to an Etruscan invasion.
         </p>
       </div>
+      <div className="footer"></div>
+      <h1 className="footer">
+        <p> Alex W 2024</p>
+      </h1>
     </div>
   );
 }
