@@ -16,7 +16,6 @@ export default function App() {
       setTime({
         minutes: date.getMinutes(),
         hours: date.getHours(),
-        seconds: date.getSeconds(),
       });
     }, 1000);
     return () => clearInterval(intervalId);
@@ -39,21 +38,27 @@ export default function App() {
   };
   return (
     <div className="app">
-      <div className="clock">
-        <span>{time.hours}:</span>
-        <span>{time.minutes}:</span>
-        <span>{time.seconds}</span>
-        <span>{time.hours >= 12 ? " PM" : " AM"}</span>
+      <div className="clock" style={{ background: bgColor }}>
+        <span>
+          <u>|{time.hours}:</u>
+        </span>
+        <span>
+          <u>{time.minutes}</u>
+        </span>
+        <span>
+          <u>{time.hours >= 12 ? " PM|" : " AM|"}</u>
+        </span>
+
+        <div style={{ background: bgColor }}>
+          <p className="disclaimer" style={{ background: bgColor }}>
+            This is a fictional website for educational purposes
+          </p>
+          <h1 className="app-title"> ROME </h1>
+          <p className="app-slogan"> Explore the ancient city of Rome</p>
+        </div>
       </div>
-      <header style={{ background: bgColor }}>
-        <p className="disclaimer">
-          This is a fictional website for educational purposes
-        </p>
-        <h1 className="app-title"> Rome </h1>
-        <p className="app-slogan"> Explore the ancient city of Rome</p>
-      </header>
       <button type="button" onClick={changeColor}>
-        Click me!
+        Colour
       </button>
       <br />
       <div className="container">
@@ -71,7 +76,9 @@ export default function App() {
       </div>
       <hr className="app-divider" />
       <div>
-        <h2 className="app-subheader">Climate</h2>
+        <h2 className="app-subheader">
+          <u>Climate</u>
+        </h2>
         <p>
           {" "}
           Rome has a Mediterranean climate with cool winters and warm and hot
@@ -83,7 +90,9 @@ export default function App() {
       </div>
       <hr className="app-divider" />
       <div>
-        <h2 className="app-subheader">History</h2>
+        <h2 className="app-subheader">
+          <u>History</u>
+        </h2>
         <p>
           Rome was founded around 625 BC in the areas of ancient Italy known as
           Etruria and Latium. It is thought that the city-state of Rome was
@@ -91,8 +100,7 @@ export default function App() {
           from the surrounding hills in response to an Etruscan invasion.
         </p>
       </div>
-      <div className="footer"></div>
-      <h1 className="footer">
+      <h1 className="footer" style={{ background: bgColor }}>
         <p> Alex W 2024</p>
       </h1>
     </div>
